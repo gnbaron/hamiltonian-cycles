@@ -17,7 +17,7 @@ public class Main {
 		
 		graph.addVertex(a,b,c,d,e);
 		
-		graph.findHamiltonianCycles();
+		graph.findHamiltonianCycles(a);
 		
 	}
 	
