@@ -23,7 +23,7 @@ public class Graph {
 		printCycles(cycles);
 		return cycles;
 	}
-	
+
 	private List<List<Vertex>> findHamiltonianCycles(Vertex current, List<Vertex> visited, List<List<Vertex>> cycles){
 		if(!visited.contains(current)){
 			visited.add(current);
@@ -31,6 +31,7 @@ public class Graph {
 			if(visited.size() == vertices.size() && current.adjacentNodes.contains(visited.get(0))){
 				List<Vertex> cycle = new ArrayList<>();
 				cycle.addAll(visited);
+				cycle.add(visited.get(0));
 				cycles.add(cycle); 
 			} else
 				current.adjacentNodes.forEach((adjacent) -> {
